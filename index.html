@@ -1,0 +1,63 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>2026 국제정세 · 미국 선거 실시간 설문</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f2f5fa;color:#1E2433;font-family:system-ui,'Apple SD Gothic Neo','Nanum Gothic',sans-serif}main{max-width:1080px;margin:auto;padding:48px 22px}header{margin-bottom:30px}.eyebrow{font-size:12px;letter-spacing:2px;color:#505A74;font-weight:700}h1{font-size:clamp(28px,5vw,42px);letter-spacing:-1.5px;margin:12px 0}p{color:#505A74;line-height:1.7}.status{display:inline-block;border:1px solid #CDD3E0;border-radius:30px;padding:7px 13px;font-size:13px}.layout{display:grid;grid-template-columns:1fr 1.15fr;gap:20px}.card{background:#FDFDFF;border:1px solid #E2E6F0;border-radius:20px;padding:28px}h2{font-size:20px;margin-top:0}.choices{display:grid;gap:12px;margin:24px 0}label{display:flex;align-items:center;gap:12px;border:1px solid #CDD3E0;border-radius:12px;padding:16px;cursor:pointer}label:has(input:checked){border-color:#1751D0;background:#E8EEFB}input{accent-color:#1751D0;width:18px;height:18px}button{border:0;border-radius:12px;padding:15px 20px;background:#1751D0;color:white;font-size:15px;font-weight:700;cursor:pointer;width:100%}button:disabled{background:#505A74;cursor:not-allowed}button:focus-visible,input:focus-visible{outline:3px solid #E2661E;outline-offset:3px}.total{font-size:38px;font-weight:800;line-height:1.2}.hint{font-size:13px;color:#505A74}#message{min-height:44px;font-size:14px}.barrow{margin:22px 0}.barhead{display:flex;justify-content:space-between;gap:12px;font-size:14px;margin-bottom:9px}.track{height:25px;background:#E8EEFB;border-radius:5px;overflow:hidden}.fill{height:100%;width:0;background:#1751D0;transition:width .35s ease}.axis{display:flex;justify-content:space-between;color:#505A74;font-size:12px;margin-top:8px}table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:10px;text-align:left;border-bottom:1px solid #E2E6F0}details{margin-top:24px}summary{cursor:pointer;font-size:14px}footer{font-size:12px;color:#505A74;line-height:1.8;margin-top:24px}#setup{border:1px solid #CDD3E0;background:#FDFDFF;padding:18px;border-radius:12px;margin-bottom:24px}noscript{display:block;padding:20px}@media(max-width:760px){main{padding:28px 16px}.layout{grid-template-columns:1fr}.card{padding:22px}}@media(prefers-reduced-motion:reduce){.fill{transition:none}}
+
+.poll{margin-top:28px}.question-title{font-size:clamp(21px,3vw,28px);line-height:1.5;margin-bottom:8px}.number{font-size:12px;font-weight:800;letter-spacing:1px;color:#505A74}.poll>header{margin-bottom:18px}.message{min-height:44px;font-size:14px}.card h3{font-size:18px;margin-top:0}</style></head><body><main><header><div class="eyebrow">2026 / LIVE OPINION POLL</div><h1>당신은 어떻게 전망하나요?</h1><p>두 질문에 각각 응답해 주세요. 모든 참여자의 응답이 질문별 막대그래프에 실시간으로 반영됩니다.<br>이 페이지는 의견 설문이며, 사건의 현황이나 실제 선거 결과를 확정하는 자료가 아닙니다.</p></header><div id="setup" hidden>아직 서버에 연결되지 않았습니다. HTML의 <strong>FIREBASE_CONFIG</strong>를 입력하고 새 보안 규칙을 Firebase에 게시해 주세요. 설정 전에는 제출할 수 없습니다.</div><section class="poll" id="iran-war-2026-v1"><header><div class="number">QUESTION 01</div><h2 class="question-title" id="iran-war-2026-v1-question"></h2><p>2026년 12월 31일까지의 종전 여부에 대한 개인의 전망을 묻습니다.</p><span id="iran-war-2026-v1-status" class="status" role="status">연결 준비 중</span></header><div class="layout"><section class="card"><h3>나의 응답</h3><form id="iran-war-2026-v1-voteForm"><div id="iran-war-2026-v1-choices" class="choices"></div><button id="iran-war-2026-v1-submit" disabled>연결 후 제출할 수 있습니다</button></form><p id="iran-war-2026-v1-message" class="message" role="status" aria-live="polite"></p><div class="hint">같은 브라우저에서는 응답을 수정할 수 있습니다.</div></section>
+<section class="card" aria-label="실시간 응답 결과"><h3>실시간 결과</h3><div><span id="iran-war-2026-v1-total" class="total">—</span> <span class="hint">명 참여</span></div><p id="iran-war-2026-v1-updated" class="hint">서버의 응답을 기다리고 있습니다.</p><div id="iran-war-2026-v1-bars" aria-label="선택지별 응답 수 막대그래프"></div><div class="axis"><span>0명</span><span id="iran-war-2026-v1-scale">—명</span></div><details><summary>정확한 수치 보기</summary><table><caption class="hint">선택지별 응답 수</caption><thead><tr><th scope="col">선택지</th><th scope="col">응답</th><th scope="col">비율</th></tr></thead><tbody id="iran-war-2026-v1-tableBody"></tbody></table></details></section></div></section><section class="poll" id="us-midterms-2026-v1"><header><div class="number">QUESTION 02</div><h2 class="question-title" id="us-midterms-2026-v1-question"></h2><p>상·하원별 세부 결과가 아닌 전반적인 선거 결과에 대한 전망입니다. 양당 중 하나를 선택해 주세요.</p><span id="us-midterms-2026-v1-status" class="status" role="status">연결 준비 중</span></header><div class="layout"><section class="card"><h3>나의 응답</h3><form id="us-midterms-2026-v1-voteForm"><div id="us-midterms-2026-v1-choices" class="choices"></div><button id="us-midterms-2026-v1-submit" disabled>연결 후 제출할 수 있습니다</button></form><p id="us-midterms-2026-v1-message" class="message" role="status" aria-live="polite"></p><div class="hint">같은 브라우저에서는 응답을 수정할 수 있습니다.</div></section>
+<section class="card" aria-label="실시간 응답 결과"><h3>실시간 결과</h3><div><span id="us-midterms-2026-v1-total" class="total">—</span> <span class="hint">명 참여</span></div><p id="us-midterms-2026-v1-updated" class="hint">서버의 응답을 기다리고 있습니다.</p><div id="us-midterms-2026-v1-bars" aria-label="선택지별 응답 수 막대그래프"></div><div class="axis"><span>0명</span><span id="us-midterms-2026-v1-scale">—명</span></div><details><summary>정확한 수치 보기</summary><table><caption class="hint">선택지별 응답 수</caption><thead><tr><th scope="col">선택지</th><th scope="col">응답</th><th scope="col">비율</th></tr></thead><tbody id="us-midterms-2026-v1-tableBody"></tbody></table></details></section></div></section><footer>익명 브라우저 식별을 사용합니다. 같은 브라우저에서 질문별 응답을 수정할 수 있지만, 다른 브라우저나 사이트 데이터 삭제를 통한 중복 참여는 완전히 막지 못합니다. 개인정보는 입력받지 않습니다. 각 그래프는 해당 질문의 응답만 집계하며, 질문별 참여자 수가 다를 수 있습니다.</footer><noscript>설문 참여에는 JavaScript 활성화가 필요합니다.</noscript></main><script type="module">// 본인의 Firebase 웹 앱 설정을 입력하세요. 관리자 비밀키는 넣지 마세요.
+const FIREBASE_CONFIG={apiKey:"",authDomain:"",databaseURL:"",projectId:"",appId:""};
+// 질문 의미나 선택지 순서를 바꾸면 id와 데이터베이스 규칙도 바꾸세요.
+const POLLS=[{"id": "iran-war-2026-v1", "question": "미국·이란 전쟁이 2026년 안에 끝날 것으로 생각하시나요?", "options": ["올해 안에 끝난다", "올해 안에 끝나지 않는다"], "note": "2026년 12월 31일까지의 종전 여부에 대한 개인의 전망을 묻습니다."}, {"id": "us-midterms-2026-v1", "question": "2026년 미국 중간선거에서 어느 정당이 승리할 것으로 생각하시나요?", "options": ["공화당 승리", "민주당 승리"], "note": "상·하원별 세부 결과가 아닌 전반적인 선거 결과에 대한 전망입니다. 양당 중 하나를 선택해 주세요."}];
+function initPoll(poll,uid,db,api){
+const POLL_ID=poll.id,QUESTION=poll.question,OPTIONS=poll.options;
+const root=document.getElementById(POLL_ID);
+const $ = id => document.getElementById(POLL_ID+'-'+id);
+let ready=false, connected=false, busy=false, myChoice=null;
+$('question').textContent = QUESTION;
+OPTIONS.forEach((text,index) => {
+ const label=document.createElement('label'),input=document.createElement('input'),span=document.createElement('span');
+ input.type='radio'; input.name='choice'; input.value=String(index); input.required=true; input.disabled=true;
+ span.textContent=text;label.append(input,span);$('choices').append(label);
+ const row=document.createElement('div');row.className='barrow';
+ const head=document.createElement('div');head.className='barhead';
+ const name=document.createElement('span'),value=document.createElement('span');name.textContent=text;value.textContent='—명';value.id=POLL_ID+'-value'+index;head.append(name,value);
+ const track=document.createElement('div');track.className='track';const fill=document.createElement('div');fill.className='fill';fill.id=POLL_ID+'-bar'+index;track.append(fill);row.append(head,track);$('bars').append(row);
+ const tr=document.createElement('tr');const td=document.createElement('td');td.textContent=text;tr.append(td);
+ ['count','percent'].forEach(key=>{const cell=document.createElement('td');cell.id=POLL_ID+'-'+key+index;cell.textContent='—';tr.append(cell)});$('tableBody').append(tr);
+});
+function controls(){const enabled=ready&&connected&&!busy;$('submit').disabled=!enabled;root.querySelectorAll('input[name="choice"]').forEach(el=>el.disabled=!enabled);$('submit').textContent=busy?'서버에 저장 중…':!connected?'연결 대기 중':!ready?'결과 불러오는 중':myChoice===null?'응답 제출하기':'응답 수정하기';}
+function fail(error){console.error(error);ready=false;$('status').textContent='연결 또는 권한 확인 필요';$('message').textContent='연결하지 못했습니다. Firebase 설정·익명 로그인·데이터베이스 규칙을 확인한 뒤 새로고침해 주세요.';controls();}
+function render(votes){
+ const counts=OPTIONS.map(()=>0);myChoice=null;
+ Object.entries(votes||{}).forEach(([id,vote])=>{if(vote&&Number.isInteger(vote.choice)&&vote.choice>=0&&vote.choice<OPTIONS.length){counts[vote.choice]++;if(id===uid)myChoice=vote.choice;}});
+ const total=counts.reduce((a,b)=>a+b,0),maximum=Math.max(1,...counts);$('total').textContent=total.toLocaleString('ko-KR');$('scale').textContent=maximum+'명';
+ counts.forEach((count,index)=>{const pct=total?(count/total*100).toFixed(1):'0.0';$('value'+index).textContent=count+'명';$('bar'+index).style.width=(count/maximum*100)+'%';$('bar'+index).parentElement.title=OPTIONS[index]+': '+count+'명 ('+pct+'%)';$('count'+index).textContent=count+'명';$('percent'+index).textContent=pct+'%';});
+ if(myChoice!==null&&!busy&&!root.dataset.editing){root.querySelectorAll('input[name="choice"]').forEach(el=>el.checked=Number(el.value)===myChoice);}
+ $('updated').textContent='서버 결과 수신 · '+new Date().toLocaleTimeString('ko-KR');ready=true;controls();
+}
+$('voteForm').addEventListener('submit',async event=>{
+ event.preventDefault();if(!ready||!connected||busy)return;const selected=root.querySelector('input[name="choice"]:checked');if(!selected)return;
+ const choice=Number(selected.value);busy=true;controls();$('message').textContent='서버 저장 확인 중…';
+ try{await api.set(api.ref(db,'polls/'+POLL_ID+'/votes/'+uid),{choice});myChoice=choice;delete root.dataset.editing;$('message').textContent='응답이 저장되었습니다. 다른 참여자에게도 자동 반영됩니다.';}
+ catch(error){console.error(error);$('message').textContent='저장하지 못했습니다. 연결 상태와 데이터베이스 규칙을 확인해 주세요.';}
+ finally{busy=false;controls();}
+});
+
+root.addEventListener('change',event=>{if(event.target.name==='choice')root.dataset.editing='true';});
+api.onValue(api.ref(db,'.info/connected'),snapshot=>{connected=snapshot.val()===true;$('status').textContent=connected?'실시간 연결됨':'재연결 중 · 마지막 수신 결과';controls();},fail);
+api.onValue(api.ref(db,'polls/'+POLL_ID+'/votes'),snapshot=>render(snapshot.val()),fail);
+window.addEventListener('offline',()=>{connected=false;$('status').textContent='오프라인 · 마지막 수신 결과';controls();});
+}
+async function start(){
+ if(!FIREBASE_CONFIG.apiKey||!FIREBASE_CONFIG.databaseURL||!FIREBASE_CONFIG.projectId){document.getElementById('setup').hidden=false;POLLS.forEach(p=>document.getElementById(p.id+'-status').textContent='설정 필요 · 아직 연결되지 않음');return;}
+ try{
+ const [appApi,authApi,dbApi]=await Promise.all([
+ import('https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js'),
+ import('https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js'),
+ import('https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js')]);
+ const app=appApi.initializeApp(FIREBASE_CONFIG),auth=authApi.getAuth(app);
+ await authApi.setPersistence(auth,authApi.browserLocalPersistence);
+ const credential=await authApi.signInAnonymously(auth),db=dbApi.getDatabase(app);
+ POLLS.forEach(p=>initPoll(p,credential.user.uid,db,dbApi));
+ }catch(error){console.error(error);POLLS.forEach(p=>{document.getElementById(p.id+'-status').textContent='연결 실패';document.getElementById(p.id+'-message').textContent='Firebase 설정, 익명 로그인, 도메인 및 데이터베이스 규칙을 확인한 뒤 새로고침해 주세요.';});}
+}
+start();</script></body></html>
